@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Background-gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --Ligh-slate-blue: hsl(252, 100%, 67%); /*Background*/
+    --Light-royal-blue: hsl(241, 81%, 54%); /*Background*/
+
+    --Circle-gradient: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    --Violet-blue: hsla(256, 72%, 46%, 1); /*Circle*/
+    --Persian-blue: hsla(241, 72%, 46%, 0); /*Circle*/
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--White);
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+header{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/*Left Section*/
+.container {
+    max-width: 725px;
+    display:flex;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    border-radius: 1rem;
+}
+
+.container .results {
+    background: var(--Background-gradient);
+    padding: 3rem;
+    color: var(--White);
+    border-radius: 1rem;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .results header{
+    color: var(--Light-lavender);
+}
+
+.container .results .score-container {
+    background: var(--Circle-gradient);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+.container .results .score-container #score-garnered {
+   font-size: 4.5rem;
+   font-weight: 800;
+}
+
+.container .results .score-container #total-score {
+    color: hsl(240, 28%, 63%);
+    font-weight: 700;
+    margin-top: -10px;
+ }
+
+.container .results h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container .results .result-description {
+    color: var(--Light-lavender);
+    text-align: center;
+}
+
+/*Right Section*/
+.container .stats {
+    padding: 3rem;
+    width: 100%;
+}
+
+.container .stats .tab {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/*Target the h4 and p*/
+.container .stats .tab div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Target the "/ 100" */
+.container .stats .tab div p span {
+    color: hsl(226, 13%, 55%);
+    font-weight: 700;
+}
+
+/* Reaction Tab */
+.container .stats #reaction-tab {
+    background-color: hsla(0, 100%, 67%, 0.1);
+    display: flex;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.container .stats #reaction {
+    color: var(--Light-red);
+    padding-left: 0.5rem;
+}
+
+/* Memory Tab */
+.container .stats #memory-tab {
+    background-color: hsla(39, 100%, 56%, 0.1);
+    display: flex;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.container .stats #memory {
+    padding-left: 0.5rem;
+    color: var(--Orangey-yellow);
+}
+
+/* Verbal Tab */
+.container .stats #verbal-tab {
+    background-color: hsla(166, 100%, 37%, 0.1);
+    display: flex;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.container .stats #verbal {
+    padding-left: 0.5rem;
+    color: var(--Green-teal);
+}
+
+/* Visual Tab */
+.container .stats #visual-tab {
+    background-color: hsla(234, 85%, 45%, 0.1);
+    display: flex;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.container .stats #visual {
+    padding-left: 0.5rem;
+    color: var(--Cobalt-blue);
+}
+
+/* Continue Button */
+.container .stats .continue-btn {
+    width: 100%;
+    color:white;
+    border: none;
+    background: var(--Gray-blue);
+    height: 3rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+/* Change Color of Continue Button */
+.container .stats .continue-btn:hover {
+    background: var(--Background-gradient);
+}
+
+/* Footer */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 430px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .container .results {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .container .results .score-container {
+        background: var(--Circle-gradient);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .container .results .score-container #score-garnered {
+        font-size: 3.5rem;
+        font-weight: 800;
+     }
+
+     .container .stats {
+        padding: 2rem;
+        width: 100%;
+    }
+     
+}
